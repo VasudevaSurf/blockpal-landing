@@ -4,64 +4,34 @@ import React from "react";
 const HeroSection: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
-      {/* Background gradient effects - Exact match to Figma */}
-      <div className="absolute inset-0">
-        {/* Main glowing yellow ellipse - positioned exactly like in Figma */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="w-[1400px] h-[700px] rounded-full bg-gradient-to-br from-yellow-300/40 via-yellow-400/50 to-yellow-500/30 blur-[100px] animate-pulse"></div>
-        </div>
-
-        {/* Secondary glow layer */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="w-[1000px] h-[500px] rounded-full bg-gradient-to-r from-yellow-400/30 via-yellow-300/40 to-yellow-200/25 blur-[80px]"></div>
-        </div>
-
-        {/* Dark inner ellipse - creates the depth effect */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3">
-          <div className="w-[900px] h-[450px] rounded-full bg-black/70 blur-[60px]"></div>
-        </div>
-
-        {/* Inner dark core */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/4">
-          <div className="w-[600px] h-[300px] rounded-full bg-black/80 blur-[40px]"></div>
-        </div>
-
-        {/* Dotted pattern overlay - exactly like in Figma */}
-        <div
-          className="absolute bottom-0 left-0 w-full h-80 opacity-20"
+      {/* Background with horizontally stretched wave image */}
+      <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-6xl h-[32rem]">
+        <img
+          src="/bgAbove.png"
+          alt="Background wave design"
+          className="w-full h-full object-cover"
           style={{
-            backgroundImage: `radial-gradient(circle, #404040 1.5px, transparent 1.5px)`,
-            backgroundSize: "24px 24px",
             maskImage:
-              "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%)",
-          }}
-        />
-
-        {/* Additional subtle dots for texture */}
-        <div
-          className="absolute bottom-0 right-0 w-1/2 h-60 opacity-10"
-          style={{
-            backgroundImage: `radial-gradient(circle, #606060 1px, transparent 1px)`,
-            backgroundSize: "18px 18px",
-            maskImage:
-              "linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 70%)",
+              "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0.6) 65%, rgba(0,0,0,0) 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0.6) 65%, rgba(0,0,0,0) 100%)",
           }}
         />
       </div>
 
-      {/* Hero Content */}
+      {/* Hero Content - Positioned slightly inside the wave */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center">
-        <div className="max-w-5xl mx-auto pt-20">
-          {/* Main Heading - Exact typography from Figma */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-[1.1] tracking-tight">
+        <div className="max-w-4xl mx-auto pt-40">
+          {/* Main Heading - Slightly smaller font size */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-[1.1] tracking-tight">
             <span className="text-white">Blockpal : </span>
-            <span className="text-gray-300">Your All-in-One</span>
+            <span className="text-gray-200">Your All-in-One</span>
             <br />
-            <span className="text-gray-300">Crypto Ecosystem</span>
+            <span className="text-gray-200">Crypto Ecosystem</span>
           </h1>
 
-          {/* Description - Exact text from Figma */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+          {/* Description - Slightly smaller font size */}
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed font-normal px-4">
             Trade, automate Transactions, research, and connect everything you
             need. Blockpal is your all-in-one crypto ecosystem, empowering you
             to trade, automate transactions, research , and connect with your
@@ -69,12 +39,12 @@ const HeroSection: React.FC = () => {
             brings everything seamlessly under one roof
           </p>
 
-          {/* Call to Action Buttons - Exact styling from Figma */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-yellow-400 text-black px-10 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400/25 w-full sm:w-auto min-w-[160px]">
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button className="bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold text-base hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400/25 w-full sm:w-auto min-w-[130px]">
               Get Started
             </button>
-            <button className="border-2 border-gray-600 text-white px-10 py-4 rounded-full font-semibold text-lg hover:border-yellow-400 hover:text-yellow-400 hover:shadow-lg hover:shadow-yellow-400/10 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto min-w-[160px]">
+            <button className="border border-gray-500 text-white px-8 py-3 rounded-full font-semibold text-base hover:border-yellow-400 hover:text-yellow-400 hover:shadow-lg hover:shadow-yellow-400/10 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto min-w-[130px]">
               Try Demo
             </button>
           </div>

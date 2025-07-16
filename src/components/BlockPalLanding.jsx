@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 
-const BlockPalLanding: React.FC = () => {
+const BlockPalLanding = () => {
   return (
     <div className="relative">
       {/* Navbar positioned over the hero section */}
