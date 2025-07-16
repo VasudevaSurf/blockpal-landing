@@ -1,8 +1,6 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { nunito, satoshi } from "./fonts";
 import type { Metadata } from "next";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BlockPal - Your All-in-One Crypto Ecosystem",
@@ -21,7 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${satoshi.variable} ${nunito.variable} ${satoshi.className}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

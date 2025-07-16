@@ -61,18 +61,18 @@ const HeroSection: React.FC = () => {
               className="flex flex-col items-center relative"
               style={{ gap: "20px" }}
             >
-              {/* Main Heading */}
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] tracking-tight relative z-10">
+              {/* Main Heading - Using Nunito font */}
+              <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] tracking-tight relative z-10">
                 <span className="text-white">Blockpal : </span>
                 <span className="text-gray-200">Your All-in-One</span>
                 <br />
                 <span className="text-gray-200">Crypto Ecosystem</span>
               </h1>
 
-              {/* Caption/Description with dotted background */}
+              {/* Caption/Description with dotted background - Using Satoshi font */}
               <div className="relative max-w-3xl lg:max-w-4xl mx-auto">
                 {/* Union.png background positioned behind caption - efficient responsive positioning */}
-                <div className="absolute -top-16 sm:-top-20 md:-top-24 lg:-top-28 xl:-top-20 left-1/2 transform -translate-x-1/2 w-full flex items-center justify-center pointer-events-none z-0">
+                <div className="absolute -top-16 sm:-top-20 md:-top-24 lg:-top-28 xl:-top-25 left-1/2 transform -translate-x-1/2 w-full flex items-center justify-center pointer-events-none z-0">
                   <img
                     src="/union.png"
                     alt="Dotted background decoration"
@@ -80,7 +80,7 @@ const HeroSection: React.FC = () => {
                   />
                 </div>
 
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 mx-auto leading-relaxed font-normal px-2 sm:px-4 relative z-10">
+                <p className="font-body text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 mx-auto leading-relaxed font-normal px-2 sm:px-4 relative z-10">
                   Trade, automate Transactions, research, and connect everything
                   you need. Blockpal is your all-in-one crypto ecosystem,
                   empowering you to trade, automate transactions, research , and
@@ -93,15 +93,15 @@ const HeroSection: React.FC = () => {
             {/* 40px gap between containers */}
             <div style={{ height: "40px" }}></div>
 
-            {/* Container 2: Buttons with 12px horizontal gap - smaller buttons */}
+            {/* Container 2: Buttons with 12px horizontal gap - smaller buttons with Satoshi font */}
             <div
               className="flex flex-col sm:flex-row justify-center items-center relative z-10"
               style={{ gap: "12px" }}
             >
-              <button className="bg-yellow-400 text-black px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold text-xs sm:text-sm hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400/25 w-full sm:w-auto min-w-[100px] sm:min-w-[110px]">
+              <button className="font-body bg-yellow-400 text-black px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-xs hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-400/25 w-full sm:w-auto min-w-[85px] sm:min-w-[95px]">
                 Get Started
               </button>
-              <button className="border border-gray-500 text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold text-xs sm:text-sm hover:border-yellow-400 hover:text-yellow-400 hover:shadow-lg hover:shadow-yellow-400/10 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto min-w-[100px] sm:min-w-[110px]">
+              <button className="font-body border border-gray-500 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-xs hover:border-yellow-400 hover:text-yellow-400 hover:shadow-lg hover:shadow-yellow-400/10 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto min-w-[85px] sm:min-w-[95px]">
                 Try Demo
               </button>
             </div>
