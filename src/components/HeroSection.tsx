@@ -10,13 +10,14 @@ const HeroSection: React.FC = () => {
         }
       `}</style>
       <div
-        className="min-h-screen text-white relative pt-16 sm:pt-20 lg:pt-24 hide-scrollbar"
+        className="text-white relative pt-16 sm:pt-20 lg:pt-24 hide-scrollbar"
         style={{
           backgroundColor: "#090804",
           overflowX: "hidden",
           overflowY: "auto",
           scrollbarWidth: "none" /* Firefox */,
           msOverflowStyle: "none" /* IE and Edge */,
+          minHeight: "120vh", // Allow scrolling to show complete union
         }}
       >
         {/* Corner frame images */}
@@ -71,12 +72,17 @@ const HeroSection: React.FC = () => {
 
               {/* Caption/Description with dotted background - Using Satoshi font */}
               <div className="relative max-w-3xl lg:max-w-4xl mx-auto">
-                {/* Union.png background positioned behind caption - efficient responsive positioning */}
-                <div className="absolute -top-16 sm:-top-20 md:-top-24 lg:-top-28 xl:-top-25 left-1/2 transform -translate-x-1/2 w-full flex items-center justify-center pointer-events-none z-0">
+                {/* Union.png background positioned behind caption - fully visible when scrolling */}
+                <div className="absolute -top-16 sm:-top-20 md:-top-24 lg:-top-28 xl:-top-32 left-1/2 transform -translate-x-1/2 w-full flex items-center justify-center pointer-events-none z-0">
                   <img
                     src="/union.png"
                     alt="Dotted background decoration"
                     className="w-full h-auto object-contain opacity-80"
+                    style={{
+                      minWidth: "1000px",
+                      width: "clamp(1000px, 150vw, 1400px)",
+                      maxHeight: "none", // Allow full height
+                    }}
                   />
                 </div>
 
