@@ -2,6 +2,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
+import SafeSection from "./SafeSection";
 
 const BlockPalLanding = () => {
   return (
@@ -13,6 +14,7 @@ const BlockPalLanding = () => {
 
       {/* Hero Section with background */}
       <HeroSection />
+      <SafeSection />
     </div>
   );
 };
