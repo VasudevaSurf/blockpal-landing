@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import SafeSection from "./SafeSection";
 import TokenOverviewSection from "./TokenOverviewSection";
+import BlockpalWalletAgentSection from "./BlockpalWalletAgentSection";
 
 const BlockPalLanding = () => {
   return (
@@ -17,6 +18,7 @@ const BlockPalLanding = () => {
       <HeroSection />
       <SafeSection />
       <TokenOverviewSection />
+      <BlockpalWalletAgentSection />
     </div>
   );
 };
