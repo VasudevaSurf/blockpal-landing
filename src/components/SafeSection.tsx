@@ -4,7 +4,7 @@ import React from "react";
 const SafeSection: React.FC = () => {
   return (
     <div
-      className="min-h-screen text-white relative py-6 sm:py-8 lg:py-10"
+      className="min-h-screen text-white relative py-0 sm:py-4 md:py-6 lg:py-8 xl:py-10"
       style={{
         backgroundColor: "#090804",
       }}
@@ -12,9 +12,9 @@ const SafeSection: React.FC = () => {
       {/* Main Content Container */}
       <div className="max-w-5xl mx-auto px-3 sm:px-4 lg:px-6">
         {/* Header Section */}
-        <div className="text-left mb-6 sm:mb-8 lg:mb-10">
+        <div className="text-left mb-4 sm:mb-6 md:mb-8 lg:mb-10">
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight"
             style={{ fontFamily: "Nunito, sans-serif" }}
           >
             <span className="text-[#EDEDED]">Everything You Need.</span>
@@ -24,25 +24,23 @@ const SafeSection: React.FC = () => {
         </div>
 
         {/* Features Grid - Custom Layout */}
-        <div className="max-w-5xl mx-auto mb-6">
+        <div className="max-w-5xl mx-auto mb-3 sm:mb-4 md:mb-6">
           {/* Row 1 - 2 boxes with specific dimensions */}
-          <div className="flex flex-col lg:flex-row gap-3 lg:gap-4 mb-3 lg:mb-4">
+          <div className="flex flex-col lg:flex-row gap-2 sm:gap-3 lg:gap-4 mb-2 sm:mb-3 lg:mb-4">
             {/* Blockpal DEX - First Box */}
             <div
-              className="rounded-[24px] border border-white/10 p-3 lg:p-4"
+              className="rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border border-white/10 p-2 sm:p-3 lg:p-4 w-full lg:w-[550px] lg:flex-shrink-0"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.00) 100%)",
-                width: "550px",
-                flexShrink: 0,
               }}
             >
               <div
-                className="mb-3 flex justify-center items-center"
-                style={{ minHeight: "220px" }}
+                className="mb-2 sm:mb-3 flex justify-center items-center"
+                style={{ minHeight: "160px" }}
               >
                 {/* DEX Interface Image - Slightly smaller and centered */}
-                <div className="rounded-lg overflow-hidden relative w-5/6 max-w-md h-57">
+                <div className="rounded-lg overflow-hidden relative w-5/6 max-w-md h-40 sm:h-48 md:h-57">
                   <img
                     src="/dex-interface.png"
                     alt="Blockpal DEX Interface"
@@ -50,7 +48,7 @@ const SafeSection: React.FC = () => {
                   />
                   {/* Enhanced bottom fade overlay - more pronounced */}
                   <div
-                    className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+                    className="absolute bottom-0 left-0 right-0 h-12 sm:h-16 pointer-events-none"
                     style={{
                       background:
                         "linear-gradient(transparent 0%, rgba(9, 8, 4, 0.1) 20%, rgba(9, 8, 4, 0.3) 40%, rgba(9, 8, 4, 0.5) 60%, rgba(9, 8, 4, 0.7) 80%, rgba(9, 8, 4, 0.9) 100%)",
@@ -58,10 +56,10 @@ const SafeSection: React.FC = () => {
                   ></div>
                 </div>
               </div>
-              <h3 className=" text-xs lg:text-lg font satoshi text-[#EDEDED] mb-1">
+              <h3 className="text-sm sm:text-base lg:text-lg font-satoshi text-[#EDEDED] mb-1">
                 Blockpal DEX
               </h3>
-              <p className="font-satoshi text-xs text-[#EEEEEECC] leading-relaxed">
+              <p className="font-satoshi text-xs sm:text-sm text-[#EEEEEECC] leading-relaxed">
                 Blockpal DEX is a secure, user-friendly decentralized exchange
                 that lets you swap, buy, and sell crypto while keeping full
                 control of your funds—no intermediaries, just fast, seamless
@@ -71,14 +69,14 @@ const SafeSection: React.FC = () => {
 
             {/* Automated Payments - Second Box */}
             <div
-              className="flex-1 flex flex-col justify-end rounded-[24px] border border-white/10 p-3"
+              className="flex-1 flex flex-col justify-end rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border border-white/10 p-2 sm:p-3"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.00) 100%)",
               }}
             >
               {/* Automated Payments Image */}
-              <div className="relative w-full mb-4">
+              <div className="relative w-full mb-3 sm:mb-4">
                 <img
                   src="/automated-payments.png"
                   alt="Automated Payments Network"
@@ -87,10 +85,10 @@ const SafeSection: React.FC = () => {
               </div>
 
               <div>
-                <h3 className=" text-xs lg:text-lg font satoshi text-[#EDEDED] mb-1 px-2">
+                <h3 className="text-sm sm:text-base lg:text-lg font-satoshi text-[#EDEDED] mb-1 px-1 sm:px-2">
                   Automated Payments
                 </h3>
-                <p className="font-satoshi text-xs text-[#EEEEEECC] leading-relaxed px-2">
+                <p className="font-satoshi text-xs sm:text-sm text-[#EEEEEECC] leading-relaxed px-1 sm:px-2">
                   Blockpal's Automated Payments let you schedule recurring
                   transfers, subscriptions, and more—directly from your wallet.
                   Powered by smart contracts, it ensures secure, transparent,
@@ -101,43 +99,43 @@ const SafeSection: React.FC = () => {
           </div>
 
           {/* Row 2 - 3 boxes */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 sm:gap-3 lg:gap-4">
             {/* Web3 Wallet */}
             <div
-              className="backdrop-blur-sm rounded-[24px] p-3 sm:p-4 border border-gray-700/30 overflow-hidden relative"
+              className="backdrop-blur-sm rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] p-2 sm:p-3 lg:p-4 border border-gray-700/30 overflow-hidden relative"
               style={{
                 backgroundColor: "#0D0C06",
-                minHeight: "280px",
+                minHeight: "240px",
                 display: "flex",
                 flexDirection: "column",
               }}
             >
               {/* Spark effect positioned at top middle */}
-              <div className="rounded-[24px] absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
+              <div className="rounded-[24px] absolute -top-12 sm:-top-16 left-1/2 transform -translate-x-1/2 z-10">
                 <img
                   src="/spark.png"
                   alt="Spark Effect"
-                  className="w-40 h-40 object-contain"
+                  className="w-32 sm:w-40 h-32 sm:h-40 object-contain"
                 />
               </div>
 
               <div className="flex-1">
                 {/* Web3 Wallet Image - positioned with padding */}
-                <div className="rounded-[24px] overflow-hidden p-1">
+                <div className="rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] overflow-hidden p-1">
                   <img
                     src="/web3-wallet.png"
                     alt="Web3 Wallet Security"
-                    className="w-full h-auto object-cover rounded-[24px]"
+                    className="w-full h-auto object-cover rounded-[16px] sm:rounded-[20px] lg:rounded-[24px]"
                   />
                 </div>
               </div>
 
               {/* Content positioned at bottom */}
               <div style={{ marginTop: "auto" }}>
-                <h3 className=" text-xs lg:text-lg font satoshi text-[#EDEDED] mb-1 px-1.5">
+                <h3 className="text-sm sm:text-base lg:text-lg font-satoshi text-[#EDEDED] mb-1 px-1 sm:px-1.5">
                   Batch Payments
                 </h3>
-                <p className="font-satoshi text-xs text-[#EEEEEECC] leading-relaxed px-1.5">
+                <p className="font-satoshi text-xs sm:text-sm text-[#EEEEEECC] leading-relaxed px-1 sm:px-1.5">
                   Batch Payments lets you send multiple transfers in one
                   transaction—saving gas, streamlining operations, and creating
                   a clear on-chain record. Ideal for DAOs, teams, and projects
@@ -148,17 +146,17 @@ const SafeSection: React.FC = () => {
 
             {/* Batch Payments */}
             <div
-              className="backdrop-blur-sm rounded-[24px] p-3 sm:p-4 border border-gray-700/30 overflow-hidden"
+              className="backdrop-blur-sm rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] p-2 sm:p-3 lg:p-4 border border-gray-700/30 overflow-hidden"
               style={{
                 backgroundColor: "#0D0C06",
-                minHeight: "280px",
+                minHeight: "240px",
                 display: "flex",
                 flexDirection: "column",
               }}
             >
               <div className="flex-1">
                 {/* Batch Payments Image - positioned edge to edge */}
-                <div className="rounded-[24px] overflow-hidden -mx-2 sm:-mx-3 -mt-2 sm:-mt-3">
+                <div className="rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] overflow-hidden -mx-1 sm:-mx-2 lg:-mx-3 -mt-1 sm:-mt-2 lg:-mt-3">
                   <img
                     src="/batch-payments.png"
                     alt="Batch Payments Interface"
@@ -169,10 +167,10 @@ const SafeSection: React.FC = () => {
 
               {/* Content positioned at bottom */}
               <div style={{ marginTop: "auto" }}>
-                <h3 className=" text-xs lg:text-lg font satoshi text-[#EDEDED] mb-1 px-1.5">
+                <h3 className="text-sm sm:text-base lg:text-lg font-satoshi text-[#EDEDED] mb-1 px-1 sm:px-1.5">
                   Blockpal Agent
                 </h3>
-                <p className="font-satoshi text-xs text-[#EEEEEECC] leading-relaxed px-1.5">
+                <p className="font-satoshi text-xs sm:text-sm text-[#EEEEEECC] leading-relaxed px-1 sm:px-1.5">
                   Blockpal Agent is your AI-powered crypto co-pilot helping you
                   create smart contracts, analyze tokens, audit securely, and
                   get real-time insights. With natural language support and
@@ -184,17 +182,17 @@ const SafeSection: React.FC = () => {
 
             {/* Blockpal Agent */}
             <div
-              className="backdrop-blur-sm rounded-[24px] p-3 sm:p-4 border border-gray-700/30 overflow-hidden"
+              className="backdrop-blur-sm rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] p-2 sm:p-3 lg:p-4 border border-gray-700/30 overflow-hidden"
               style={{
                 backgroundColor: "#0D0C06",
-                minHeight: "280px",
+                minHeight: "240px",
                 display: "flex",
                 flexDirection: "column",
               }}
             >
               <div className="flex-1">
                 {/* Blockpal Agent Image - positioned edge to edge */}
-                <div className="rounded-lg overflow-hidden -mx-2 sm:-mx-3 -mt-2 sm:-mt-3">
+                <div className="rounded-lg overflow-hidden -mx-1 sm:-mx-2 lg:-mx-3 -mt-1 sm:-mt-2 lg:-mt-3">
                   <img
                     src="/5thImage.png"
                     alt="Blockpal Agent Interface"
@@ -205,10 +203,10 @@ const SafeSection: React.FC = () => {
 
               {/* Content positioned at bottom */}
               <div style={{ marginTop: "auto" }}>
-                <h3 className=" text-xs lg:text-lg font satoshi text-[#EDEDED] mb-1 ">
+                <h3 className="text-sm sm:text-base lg:text-lg font-satoshi text-[#EDEDED] mb-1">
                   Web3 Wallet
                 </h3>
-                <p className="font-satoshi text-xs text-[#EEEEEECC] leading-relaxed ">
+                <p className="font-satoshi text-xs sm:text-sm text-[#EEEEEECC] leading-relaxed">
                   Blockpal Web3 Wallet lets you securely store, send, and
                   receive crypto while keeping full control of your keys—an
                   intuitive, self‑custodied solution with advanced security and
@@ -220,10 +218,10 @@ const SafeSection: React.FC = () => {
 
           {/* Row 3 - Private Transactions (single box) */}
         </div>
-        <div className="flex flex-col lg:flex-row gap-3 lg:gap-4 mb-3 lg:mb-4">
+        <div className="flex flex-col lg:flex-row gap-2 sm:gap-3 lg:gap-4 mb-2 sm:mb-3 lg:mb-4">
           {/* First Container with Image and Content */}
           <div
-            className="flex-1 flex flex-col justify-end rounded-[24px] border border-white/10 "
+            className="flex-1 flex flex-col justify-end rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border border-white/10"
             style={{
               background:
                 "linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.00) 100%)",
@@ -235,11 +233,11 @@ const SafeSection: React.FC = () => {
                 <img
                   src="/3row1stImage.png"
                   alt="Private Transactions Network"
-                  className="w-full h-auto object-cover rounded-[24px]"
+                  className="w-full h-auto object-cover rounded-[16px] sm:rounded-[20px] lg:rounded-[24px]"
                 />
                 {/* Fade overlay only at the bottom of the image */}
                 <div
-                  className="absolute bottom-0 left-0 right-0 h-8 rounded-b-lg pointer-events-none"
+                  className="absolute bottom-0 left-0 right-0 h-6 sm:h-8 rounded-b-lg pointer-events-none"
                   style={{
                     background:
                       "linear-gradient(transparent 0%, rgba(9, 8, 4, 0.7) 50%, rgba(9, 8, 4, 0.9) 100%)",
@@ -249,11 +247,11 @@ const SafeSection: React.FC = () => {
             </div>
 
             {/* Content starts immediately after image */}
-            <div className="px-3 mb-3">
-              <h3 className=" text-xs lg:text-lg font satoshi text-[#EDEDED] mb-1 px-1.5">
+            <div className="px-2 sm:px-3 mb-2 sm:mb-3">
+              <h3 className="text-sm sm:text-base lg:text-lg font-satoshi text-[#EDEDED] mb-1 px-1 sm:px-1.5">
                 Private Transactions
               </h3>
-              <p className="font-satoshi text-xs text-[#EEEEEECC] leading-relaxed px-1.5">
+              <p className="font-satoshi text-xs sm:text-sm text-[#EEEEEECC] leading-relaxed px-1 sm:px-1.5">
                 Blockpal's Private Transactions protect your financial privacy
                 by making on-chain transfers anonymous and secure, keeping your
                 balances and payments confidential.
@@ -263,41 +261,39 @@ const SafeSection: React.FC = () => {
 
           {/* Second Container - Community Groups */}
           <div
-            className="rounded-[24px] border border-white/10 p-3 lg:p-4 relative overflow-hidden"
+            className="rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border border-white/10 p-2 sm:p-3 lg:p-4 relative overflow-hidden w-full lg:w-[550px] lg:flex-shrink-0"
             style={{
               background:
                 "linear-gradient(180deg, rgba(14, 14, 16, 0.00) 0%, #0D0C06 44.4%)",
-              width: "550px",
-              flexShrink: 0,
             }}
           >
             {/* Spark 1 - Top Left */}
-            <div className="absolute -top-16 -left-16 z-20">
+            <div className="absolute -top-12 sm:-top-16 -left-12 sm:-left-16 z-20">
               <img
                 src="/spark1.png"
                 alt="Spark Effect 1"
-                className="w-60 h-60 object-contain brightness-[2.5] contrast-125 saturate-150"
+                className="w-48 sm:w-60 h-48 sm:h-60 object-contain brightness-[2.5] contrast-125 saturate-150"
               />
             </div>
 
             {/* Spark 2 - Top Right */}
-            <div className="absolute -top-16 -right-16 z-20">
+            <div className="absolute -top-12 sm:-top-16 -right-12 sm:-right-16 z-20">
               <img
                 src="/spark2.png"
                 alt="Spark Effect 2"
-                className="w-60 h-60 object-contain brightness-[2.5] contrast-125 saturate-150"
+                className="w-48 sm:w-60 h-48 sm:h-60 object-contain brightness-[2.5] contrast-125 saturate-150"
               />
             </div>
 
             <div
               className="mb-2 flex justify-center items-center relative"
-              style={{ minHeight: "180px" }}
+              style={{ minHeight: "140px" }}
             >
               {/* Dotted background - extends beyond padding but not on content */}
               <div
-                className="absolute top-0 left-0 right-0 -mx-3 lg:-mx-4 -mt-3 lg:-mt-4 rounded-t-[24px] overflow-hidden"
+                className="absolute top-0 left-0 right-0 -mx-2 sm:-mx-3 lg:-mx-4 -mt-2 sm:-mt-3 lg:-mt-4 rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] overflow-hidden"
                 style={{
-                  height: "calc(100% + 12px)",
+                  height: "calc(100% + 8px)",
                   backgroundImage: "url('/dotted.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
@@ -306,7 +302,7 @@ const SafeSection: React.FC = () => {
               >
                 {/* Enhanced fade overlay for dotted background */}
                 <div
-                  className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+                  className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 pointer-events-none"
                   style={{
                     background:
                       "linear-gradient(transparent 0%, rgba(13, 12, 6, 0.2) 20%, rgba(13, 12, 6, 0.5) 40%, rgba(13, 12, 6, 0.8) 70%, rgba(13, 12, 6, 1) 100%)",
@@ -315,7 +311,7 @@ const SafeSection: React.FC = () => {
               </div>
 
               {/* DEX Interface Image - Much larger size */}
-              <div className="rounded-[lg] overflow-hidden relative w-full max-w-2xl z-10">
+              <div className="rounded-lg overflow-hidden relative w-full max-w-xl sm:max-w-2xl z-10">
                 <img
                   src="/lastImage.png"
                   alt="Blockpal DEX Interface"
@@ -323,7 +319,7 @@ const SafeSection: React.FC = () => {
                 />
                 {/* Enhanced bottom fade overlay for main image - smoother dissolve to eliminate harsh line */}
                 <div
-                  className="absolute bottom-0 left-0 right-0 h-48 pointer-events-none"
+                  className="absolute bottom-0 left-0 right-0 h-32 sm:h-48 pointer-events-none"
                   style={{
                     background:
                       "linear-gradient(to bottom, transparent 0%, rgba(13, 12, 6, 0.1) 15%, rgba(13, 12, 6, 0.3) 30%, rgba(13, 12, 6, 0.6) 50%, rgba(13, 12, 6, 0.9) 80%, rgba(13, 12, 6, 1) 100%)",
@@ -331,10 +327,10 @@ const SafeSection: React.FC = () => {
                 ></div>
               </div>
             </div>
-            <h3 className="font-satoshi text-xs lg:text-sm font-bold text-[#EDEDED]">
+            <h3 className="font-satoshi text-sm sm:text-base lg:text-lg font-bold text-[#EDEDED]">
               Community Groups
             </h3>
-            <p className="font-satoshi text-xs text-[#EEEEEECC] leading-relaxed">
+            <p className="font-satoshi text-xs sm:text-sm text-[#EEEEEECC] leading-relaxed">
               Blockpal's Community Groups let you chat, share, and collaborate
               on crypto projects within a secure Web3-powered platform—combining
               social connection with asset management seamlessly.

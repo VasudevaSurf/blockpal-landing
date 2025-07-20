@@ -19,7 +19,7 @@ const GreatMindsSection: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen text-white relative py-2 sm:py-6 lg:py-10 overflow-hidden"
+      className="text-white relative py-0 pb-4 sm:py-12 sm:pb-16 md:py-16 md:pb-20 lg:py-20 lg:pb-24 xl:py-24 xl:pb-32 overflow-hidden"
       style={{
         backgroundColor: "#090804",
       }}
@@ -46,7 +46,7 @@ const GreatMindsSection: React.FC = () => {
       {/* Main Content Container */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-12">
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
             <span className="text-white">The Great Minds </span>
             <span className="text-gray-400">Behind</span>

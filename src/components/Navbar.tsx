@@ -1,7 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
-import { NavItem } from "../types";
+
+interface NavItem {
+  label: string;
+  href: string;
+}
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -21,71 +25,90 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      {/* Navigation - Responsive design */}
-      <nav className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 max-w-7xl mx-auto relative z-50">
-        {/* Logo - Using name.png image */}
+      {/* Navigation - Enhanced Mobile Responsive */}
+      <nav className="flex items-center justify-between px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 py-2 sm:py-3 md:py-4 max-w-7xl mx-auto relative z-50">
+        {/* Logo - Increased sizing across all resolutions */}
         <div className="flex items-center">
           <img
-            src="/name.png"
+            src="/name1.png"
             alt="Blockpal"
-            className="h-4 w-20 sm:h-5 sm:w-24 md:h-6 md:w-28 object-contain"
+            className="h-5 w-24 xs:h-6 xs:w-28 sm:h-7 sm:w-32 md:h-8 md:w-36 lg:h-9 lg:w-40 xl:h-10 xl:w-44 object-contain"
           />
         </div>
 
-        {/* Desktop Navigation - Using Satoshi font */}
-        <div className="hidden md:flex lg:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
+        {/* Desktop Navigation - Enhanced spacing */}
+        <div className="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:space-x-8">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="font-body text-white hover:text-yellow-400 transition-colors duration-300 text-xs sm:text-sm lg:text-sm font-medium whitespace-nowrap"
+              className="font-body text-white hover:text-yellow-400 transition-colors duration-300 text-sm xl:text-base font-medium whitespace-nowrap"
             >
               {item.label}
             </a>
           ))}
         </div>
 
-        {/* Contact Button - Using Satoshi font */}
-        <button className="font-body hidden md:flex bg-yellow-400 text-black px-2.5 sm:px-3 lg:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-xs hover:bg-yellow-300 transition-colors duration-300 items-center gap-1 sm:gap-1.5 whitespace-nowrap">
-          <Phone size={12} className="sm:w-3.5 sm:h-3.5" />
+        {/* Contact Button - Enhanced responsive sizing */}
+        <button className="font-body hidden lg:flex bg-yellow-400 text-black px-3 xl:px-4 py-1.5 xl:py-2 rounded-full font-semibold text-sm hover:bg-yellow-300 transition-colors duration-300 items-center gap-1.5 whitespace-nowrap">
+          <Phone size={14} className="xl:w-4 xl:h-4" />
           Contact Us
         </button>
 
-        {/* Mobile menu button */}
+        {/* Mobile menu button - Enhanced responsive */}
         <button
-          className="md:hidden text-white z-50 p-1"
+          className="lg:hidden text-white z-50 p-1 touch-target"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
+          style={{ minHeight: "44px", minWidth: "44px" }}
         >
           {isMobileMenuOpen ? (
-            <X size={20} className="sm:w-6 sm:h-6" />
+            <X size={18} className="sm:w-5 sm:h-5" />
           ) : (
-            <Menu size={20} className="sm:w-6 sm:h-6" />
+            <Menu size={18} className="sm:w-5 sm:h-5" />
           )}
         </button>
       </nav>
 
-      {/* Mobile Navigation - Using Satoshi font */}
+      {/* Mobile Navigation - Enhanced mobile experience */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed top-0 left-0 right-0 bottom-0 bg-black/95 backdrop-blur-lg z-40">
-          <div className="flex flex-col space-y-4 sm:space-y-6 px-6 sm:px-8 pt-16 sm:pt-20 pb-6">
+        <div className="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-black/95 backdrop-blur-lg z-40">
+          <div className="flex flex-col space-y-3 sm:space-y-4 px-4 sm:px-6 pt-14 sm:pt-16 pb-6 h-full overflow-y-auto">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="font-body text-white hover:text-yellow-400 transition-colors duration-300 text-base sm:text-lg font-medium"
+                className="font-body text-white hover:text-yellow-400 transition-colors duration-300 text-lg sm:text-xl font-medium py-2 border-b border-gray-800/50"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
               </a>
             ))}
-            <button className="font-body bg-yellow-400 text-black px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-300 flex items-center gap-1.5 justify-center mt-4 sm:mt-6 text-sm">
-              <Phone size={14} className="sm:w-4 sm:h-4" />
+            <button
+              className="font-body bg-yellow-400 text-black px-4 sm:px-6 py-3 sm:py-4 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-300 flex items-center gap-2 justify-center mt-6 text-base sm:text-lg touch-target"
+              style={{ minHeight: "48px" }}
+            >
+              <Phone size={16} className="sm:w-5 sm:h-5" />
               Contact Us
             </button>
           </div>
         </div>
       )}
+
+      <style jsx>{`
+        .touch-target {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        @media (max-width: 374px) {
+          .xs\\:h-6 {
+            height: 1.5rem;
+          }
+          .xs\\:w-28 {
+            width: 7rem;
+          }
+        }
+      `}</style>
     </>
   );
 };

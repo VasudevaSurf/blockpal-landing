@@ -11,7 +11,7 @@ import FooterSection from "./FooterSection";
 
 const BlockPalLanding = () => {
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       {/* Navbar positioned over the hero section */}
       <div className="absolute top-0 left-0 right-0 z-50">
         <Navbar />
