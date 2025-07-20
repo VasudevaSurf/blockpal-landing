@@ -75,7 +75,7 @@ const HeroSection: React.FC = () => {
                 {/* Union.png background positioned behind caption - more visible on mobile */}
                 <div className="absolute -top-4 sm:-top-12 md:-top-16 lg:-top-20 xl:-top-24 2xl:-top-28 left-1/2 transform -translate-x-1/2 w-full flex items-center justify-center pointer-events-none z-0">
                   <img
-                    src="/union.png"
+                    src="/Union.png"
                     alt="Dotted background decoration"
                     className="w-full h-auto object-contain opacity-70 sm:opacity-80"
                     style={{
@@ -104,7 +104,7 @@ const HeroSection: React.FC = () => {
               {/* Union background for mobile only - positioned behind buttons and main image */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full flex items-center justify-center pointer-events-none z-0 sm:hidden">
                 <img
-                  src="/union.png"
+                  src="/Union.png"
                   alt="Mobile background decoration"
                   className="w-full h-auto object-contain opacity-50"
                   style={{

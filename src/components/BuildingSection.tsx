@@ -33,7 +33,7 @@ const BuildingSection: React.FC = () => {
           <div
             className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
             style={{
-              backgroundImage: "url('/union.png')",
+              backgroundImage: "url('/Union.png')",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",

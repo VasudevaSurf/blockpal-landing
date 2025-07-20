@@ -31,7 +31,7 @@ const TokenOverviewSection: React.FC = () => {
       <div
         className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden"
         style={{
-          backgroundImage: "url('/union.png')",
+          backgroundImage: "url('/Union.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -55,7 +55,7 @@ const TokenOverviewSection: React.FC = () => {
           <div
             className="relative w-[300px] h-[240px] sm:w-[400px] sm:h-[320px] md:w-[480px] md:h-[360px] lg:w-[560px] lg:h-[400px]"
             style={{
-              backgroundImage: "url('/union.png')",
+              backgroundImage: "url('/Union.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
