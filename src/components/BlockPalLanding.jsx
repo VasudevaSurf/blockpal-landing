@@ -6,6 +6,7 @@ import SafeSection from "./SafeSection";
 import TokenOverviewSection from "./TokenOverviewSection";
 import GreatMindsSection from "./GreatMindsSection";
 import BlockpalWalletAgentSection from "./BlockpalWalletAgentSection";
+import BuildingSection from "./BuildingSection";
 
 const BlockPalLanding = () => {
   return (
@@ -21,6 +22,7 @@ const BlockPalLanding = () => {
       <TokenOverviewSection />
       <BlockpalWalletAgentSection />
       <GreatMindsSection />
+      <BuildingSection />
     </div>
   );
 };
