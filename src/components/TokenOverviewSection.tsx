@@ -52,23 +52,64 @@ const TokenOverviewSection: React.FC = () => {
 
         {/* Token Distribution Chart */}
         <div className="flex justify-center mb-16 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
-          <div
-            className="relative w-[300px] h-[240px] sm:w-[400px] sm:h-[320px] md:w-[480px] md:h-[360px] lg:w-[560px] lg:h-[400px]"
-            style={{
-              backgroundImage: "url('/Union.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              opacity: 0.3, // Reduced for mobile
-            }}
-          >
-            {/* Main Circle Container - Above background */}
+          <div className="relative w-[300px] h-[240px] sm:w-[400px] sm:h-[320px] md:w-[480px] md:h-[360px] lg:w-[560px] lg:h-[400px]">
+            {/* Main Circle Container with Union.png Background */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 sm:w-80 sm:h-80 md:w-84 md:h-84 z-10 relative">
+              {/* Union.png Background specifically for SVG area */}
+              <div
+                className="absolute -inset-8 w-[calc(100%+4rem)] h-[calc(100%+4rem)]"
+                style={{
+                  backgroundImage: "url('/Union.png')",
+                  backgroundSize: "180%",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  opacity: 0.5,
+                  mixBlendMode: "overlay",
+                  zIndex: 1,
+                  mask: "radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%)",
+                  WebkitMask:
+                    "radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%)",
+                }}
+              ></div>
+
               {/* SVG Circle Chart - Enhanced brightness */}
               <svg
-                className="w-full h-full transform -rotate-85"
+                className="w-full h-full transform -rotate-85 relative z-10"
                 viewBox="0 0 200 200"
               >
+                {/* SVG Pattern/Background Definition */}
+                <defs>
+                  <pattern
+                    id="unionPattern"
+                    patternUnits="userSpaceOnUse"
+                    width="500"
+                    height="500"
+                  >
+                    <image
+                      href="/Union.png"
+                      x="-100"
+                      y="-100"
+                      width="500"
+                      height="500"
+                      opacity="0.6"
+                      style={{ mixBlendMode: "overlay" }}
+                    />
+                  </pattern>
+
+                  {/* Background circle with Union.png */}
+                  <circle
+                    id="bgCircle"
+                    cx="100"
+                    cy="100"
+                    r="75"
+                    fill="url(#unionPattern)"
+                    opacity="0.5"
+                  />
+                </defs>
+
+                {/* Background circle with Union pattern */}
+                <use href="#bgCircle" />
+
                 {/* Top segment - 25% (Blue) - Enhanced brightness */}
                 <circle
                   cx="100"
@@ -144,7 +185,7 @@ const TokenOverviewSection: React.FC = () => {
 
               {/* Reference Lines and Labels */}
               {/* Top Left - Ecosystem */}
-              <div className="absolute -top-1 -left-12 sm:-left-20">
+              <div className="absolute -top-1 -left-12 sm:-left-20 z-20">
                 <div className="flex items-start">
                   <div className="text-left">
                     <div className="text-white text-xs font-satoshi font-semibold">
@@ -216,7 +257,7 @@ const TokenOverviewSection: React.FC = () => {
               </div>
 
               {/* Top Right - Team */}
-              <div className="absolute -top-0.5 -right-8 sm:-right-14">
+              <div className="absolute -top-0.5 -right-8 sm:-right-14 z-20">
                 <div className="flex items-start">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -288,7 +329,7 @@ const TokenOverviewSection: React.FC = () => {
               </div>
 
               {/* Bottom Left - Marketing */}
-              <div className="absolute -bottom-3 -left-10 sm:-left-16">
+              <div className="absolute -bottom-3 -left-10 sm:-left-16 z-20">
                 <div className="flex items-end">
                   <div className="text-left">
                     <div className="text-white text-xs font-satoshi font-semibold">
@@ -360,7 +401,7 @@ const TokenOverviewSection: React.FC = () => {
               </div>
 
               {/* Bottom Right - Open Market */}
-              <div className="absolute -bottom-3 -right-12 sm:-right-19">
+              <div className="absolute -bottom-3 -right-12 sm:-right-19 z-20">
                 <div className="flex items-end">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -432,7 +473,7 @@ const TokenOverviewSection: React.FC = () => {
               </div>
 
               {/* Center Content with smaller bubble for more margin */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
                 <div
                   className="text-center flex flex-col items-center justify-center rounded-full border border-white/10 w-36 h-36 sm:w-48 sm:h-48 md:w-52 md:h-52 p-3 sm:p-4"
                   style={{

@@ -139,7 +139,8 @@ const HeroSection: React.FC = () => {
                     alt="Blockpal Main Interface"
                     className="w-full h-auto object-contain rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-2xl xl:rounded-2xl"
                     style={{
-                      filter: "drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4)) sm:drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5)) md:drop-shadow(0 22px 45px rgba(0, 0, 0, 0.55)) lg:drop-shadow(0 25px 50px rgba(0, 0, 0, 0.6))",
+                      filter:
+                        "drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4)) sm:drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5)) md:drop-shadow(0 22px 45px rgba(0, 0, 0, 0.55)) lg:drop-shadow(0 25px 50px rgba(0, 0, 0, 0.6))",
                       maskImage:
                         "linear-gradient(to bottom, black 0%, black 70%, transparent 100%)",
                       WebkitMaskImage:
