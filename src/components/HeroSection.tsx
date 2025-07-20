@@ -111,6 +111,30 @@ const HeroSection: React.FC = () => {
                 Try Demo
               </button>
             </div>
+
+            {/* Negative gap to move image up and overlap slightly */}
+            <div style={{ height: "-25px", marginTop: "-115px" }}></div>
+
+            {/* Container 3: Main Page Image */}
+            <div className="relative z-10 flex justify-center items-center">
+              <div className="relative max-w-4xl w-full">
+                <img
+                  src="/mainPage.png"
+                  alt="Blockpal Main Interface"
+                  className="w-full h-auto object-contain rounded-2xl"
+                  style={{
+                    filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.6))",
+                    maskImage:
+                      "linear-gradient(to bottom, black 0%, black 70%, transparent 100%)",
+                    WebkitMaskImage:
+                      "linear-gradient(to bottom, black 0%, black 70%, transparent 100%)",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Additional bottom spacing */}
+            <div style={{ height: "80px" }}></div>
           </div>
         </div>
       </div>

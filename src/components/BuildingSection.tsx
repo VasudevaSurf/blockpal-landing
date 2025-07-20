@@ -13,25 +13,37 @@ const BuildingSection: React.FC = () => {
       {/* Main Content Container */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center mb-6 sm:mb-8 lg:mb-10">
+        <div className="text-left mb-6 sm:mb-8 lg:mb-10">
           <h2
             className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight"
-            style={{ fontFamily: "Satoshi, sans-serif" }}
+            style={{ fontFamily: "Nunito, sans-serif" }}
           >
-            <span className="text-white">
-              Blockpal is Building the Future of{" "}
+            <span className="text-[#EDEDED]">
+              Blockpal is Building the Future{" "}
             </span>
-            <span className="text-gray-400">an</span>
+            <span className="text-[#7D7D7D]">of an</span>
             <br />
-            <span className="text-gray-400">all-in-one Crypto Ecosystem</span>
+            <span className="text-[#7D7D7D]">all-in-one Crypto Ecosystem</span>
           </h2>
         </div>
 
         {/* Development Phases Flow */}
         <div className="relative max-w-5xl mx-auto">
+          {/* Union.png Background Image - Positioned in the middle */}
+          <div
+            className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
+            style={{
+              backgroundImage: "url('/union.png')",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              opacity: 0.3, // Adjust opacity as needed
+            }}
+          ></div>
+
           {/* Central Timeline Line - Now Dotted */}
           <div
-            className="absolute left-1/2 transform -translate-x-1/2 w-[2px] h-full hidden lg:block"
+            className="absolute left-1/2 transform -translate-x-1/2 w-[2px] h-full hidden lg:block z-1"
             style={{
               background: `repeating-linear-gradient(
                 to bottom,
@@ -44,7 +56,7 @@ const BuildingSection: React.FC = () => {
           ></div>
 
           {/* Connecting Lines Container */}
-          <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="absolute inset-0 pointer-events-none z-1">
             {/* Center to Phase 1 (Left) - Dotted line left from center */}
             <svg
               className="absolute top-[80px] left-1/2 transform -translate-x-1/2 w-[250px] h-[2px] hidden lg:block"

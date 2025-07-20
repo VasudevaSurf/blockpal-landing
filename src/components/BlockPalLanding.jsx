@@ -7,6 +7,7 @@ import TokenOverviewSection from "./TokenOverviewSection";
 import GreatMindsSection from "./GreatMindsSection";
 import BlockpalWalletAgentSection from "./BlockpalWalletAgentSection";
 import BuildingSection from "./BuildingSection";
+import FooterSection from "./FooterSection";
 
 const BlockPalLanding = () => {
   return (
@@ -23,6 +24,7 @@ const BlockPalLanding = () => {
       <BlockpalWalletAgentSection />
       <GreatMindsSection />
       <BuildingSection />
+      <FooterSection />
     </div>
   );
 };

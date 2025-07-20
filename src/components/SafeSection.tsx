@@ -12,12 +12,14 @@ const SafeSection: React.FC = () => {
       {/* Main Content Container */}
       <div className="max-w-5xl mx-auto px-3 sm:px-4 lg:px-6">
         {/* Header Section */}
-        <div className="text-center mb-6 sm:mb-8 lg:mb-10">
-          <h2 className="font-body text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-            <span className="text-white">Think your wallet is safe? </span>
-            <span className="text-gray-400">think</span>
+        <div className="text-left mb-6 sm:mb-8 lg:mb-10">
+          <h2
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight"
+            style={{ fontFamily: "Nunito, sans-serif" }}
+          >
+            <span className="text-[#EDEDED]">Everything You Need.</span>
             <br />
-            <span className="text-gray-400">again check the facts</span>
+            <span className="text-[#7D7D7D]">Built Into One</span>
           </h2>
         </div>
 

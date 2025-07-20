@@ -18,6 +18,10 @@ const BlockpalWalletAgentSection = () => {
           style={{
             filter: "brightness(1.5)",
             mixBlendMode: "lighten",
+            maskImage:
+              "radial-gradient(ellipse at center, black 40%, transparent 80%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse at center, black 40%, transparent 80%)",
           }}
         />
       </div>
