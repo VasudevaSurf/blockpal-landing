@@ -4,13 +4,13 @@ import React from "react";
 const SafeSection: React.FC = () => {
   return (
     <div
-      className="min-h-screen text-white relative py-0 sm:py-4 md:py-6 lg:py-8 xl:py-10"
+      className="min-h-screen text-white relative py-0"
       style={{
         backgroundColor: "#090804",
       }}
     >
       {/* Main Content Container */}
-      <div className="max-w-5xl mx-auto px-3 sm:px-4 lg:px-6">
+      <div className="max-w-5xl mx-auto px-3 sm:px-4 lg:px-6 pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24">
         {/* Header Section */}
         <div className="text-left mb-4 sm:mb-6 md:mb-8 lg:mb-10">
           <h2
@@ -218,7 +218,7 @@ const SafeSection: React.FC = () => {
 
           {/* Row 3 - Private Transactions (single box) */}
         </div>
-        <div className="flex flex-col lg:flex-row gap-2 sm:gap-3 lg:gap-4 mb-2 sm:mb-3 lg:mb-4">
+        <div className="flex flex-col lg:flex-row gap-2 sm:gap-3 lg:gap-4">
           {/* First Container with Image and Content */}
           <div
             className="flex-1 flex flex-col justify-end rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border border-white/10"

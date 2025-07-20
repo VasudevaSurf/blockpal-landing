@@ -4,7 +4,7 @@ import React from "react";
 const TokenOverviewSection: React.FC = () => {
   return (
     <div
-      className="min-h-screen text-white relative pt-12 pb-4 sm:pt-8 sm:pb-6 md:pt-12 md:pb-8 lg:pt-16 lg:pb-10 xl:pt-20 xl:pb-12"
+      className="min-h-screen text-white relative pb-4 sm:pb-6 md:pb-8 lg:pb-10 xl:pb-12"
       style={{
         backgroundColor: "#090804",
       }}
@@ -41,7 +41,7 @@ const TokenOverviewSection: React.FC = () => {
       ></div>
 
       {/* Main Content Container */}
-      <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 pt-8 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-24">
         {/* Header Section */}
         <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
           <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
@@ -450,7 +450,7 @@ const TokenOverviewSection: React.FC = () => {
                         <feBlend
                           mode="normal"
                           in2="BackgroundImageFix"
-                          result="effect1_dropShadow_100_28"
+                          result="effect1_dropShadow_28"
                         />
                         <feBlend
                           mode="normal"
